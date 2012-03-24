@@ -38,4 +38,5 @@ gem 'unicorn'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 group :development do
   gem 'foreman'
+  gem 'heroku'
 end
