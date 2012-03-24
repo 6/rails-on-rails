@@ -4,6 +4,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rails', '3.2.2'
 gem 'pg'
+gem 'twitter-bootstrap-rails'
 gem 'unicorn'
 
 # Gems used for assets (not required in production environments by default)
