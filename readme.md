@@ -8,3 +8,7 @@ Get up and running quickly with Rails.
 1. edit `/config/database.yml` and make DB config changes
 1. create `/config/heroku_env.rb` and insert any secret ENV variables
 1. edit `/config/locales/en.yml` to insert your app info
+
+### start
+
+`bundle install`, then `foreman start`
