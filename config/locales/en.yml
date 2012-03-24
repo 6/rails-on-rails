@@ -2,4 +2,6 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  app: "Rails Boilerplate"
+  description_short: "Quick Rails Apps"
+  description_long: "%{app} helps me get started developing Ruby on Rails apps more quickly."

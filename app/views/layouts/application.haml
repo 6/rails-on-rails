@@ -1,12 +1,14 @@
 !!! 5
+- title = @page_title ? "#{@page_title} - #{t :app}" : "#{t :app} - #{t :description_short}"
 %html{:lang => @locale, :data => {:debug => @debug,
     :controller => controller_name,
     :action => action_name}}
   %head
     %meta{:charset => 'utf-8'}
-    %title RailsBoilerplate
+    %title= title
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
+    %meta{:name => "description", :content => t(:description_long, :app => t(:app))}
     = csrf_meta_tags
     = yield :extra_head
   %body= yield
