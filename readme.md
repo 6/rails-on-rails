@@ -11,6 +11,7 @@ Get up and running quickly with Rails.
 1. create `/config/heroku_env.rb` and insert any secret ENV variables
 1. edit `/config/locales/en.yml` to insert your app info
 1. create a heroku app on cedar: `heroku create APPNAME -s cedar`
+1. add newrelic: `heroku addons:add newrelic:standard`
 
 ### start
 

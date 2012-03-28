@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'newrelic_rpm'
 gem 'rails', '3.2.2'
 gem 'pg'
 gem 'twitter-bootstrap-rails'
