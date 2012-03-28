@@ -4,6 +4,7 @@ Get up and running quickly with Rails.
 
 1. `git clone git://github.com/6/rails-boilerplate.git`
 1. edit `/.rvmrc` to change gemset name
+1. `cd` into the app folder and run `bundle install`
 1. edit `/.git/config` origin to point to your repo (change URL to SSH version)
 1. run `rails c`, enter `SecureRandom.hex(64)`, and copy that value to `/config/initializers/secret_token.rb`
 1. edit `/config/database.yml` and make DB config changes
@@ -12,4 +13,4 @@ Get up and running quickly with Rails.
 
 ### start
 
-`bundle install`, then `foreman start`
+run `foreman start`
