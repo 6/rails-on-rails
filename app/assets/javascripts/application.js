@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require hamlcoffee
+//= require underscore
+//= require backbone
 //= require_tree ../templates
 //= require_tree .
