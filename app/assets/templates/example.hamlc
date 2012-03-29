@@ -1,2 +1,2 @@
 #hamlc-example
-  %i= "Example hamlc: #{@title}"
+  %button#test-click.btn= "Example hamlc: #{@title}"

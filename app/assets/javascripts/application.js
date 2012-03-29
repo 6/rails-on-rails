@@ -16,5 +16,10 @@
 //= require hamlcoffee
 //= require underscore
 //= require backbone
+//= require backbone_main
+//= require_tree ./models
+//= require_tree ./collections
+//= require ./views/base
+//= require_tree ./views
 //= require_tree ../templates
 //= require_tree .

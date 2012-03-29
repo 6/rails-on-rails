@@ -1,5 +1,6 @@
 $ ->
   init_bootstrap()
+  App.init()
 
 init_bootstrap = ->
   $("a[rel=popover]").popover()
