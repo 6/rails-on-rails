@@ -1,0 +1,2 @@
+#hamlc-example
+  %i= "Example hamlc: #{@title}"

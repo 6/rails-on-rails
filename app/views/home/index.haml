@@ -1,3 +1,6 @@
 - content_for :extra_head do
-  %meta{:name => "keywords", :content => "cool"}
+  :javascript
+    $(function(){
+      $(JST['example']({title: "Hello from hamlc"})).appendTo("body");
+    });
 %b= link_to "Hello from home#index", root_url
