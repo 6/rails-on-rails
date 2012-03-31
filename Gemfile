@@ -8,6 +8,7 @@ gem 'pg'
 gem 'rails', '3.2.3'
 gem 'sorcery'
 gem 'twitter-bootstrap-rails'
+gem 'typus'
 gem 'unicorn'
 
 # Gems used for assets (not required in production environments by default)
