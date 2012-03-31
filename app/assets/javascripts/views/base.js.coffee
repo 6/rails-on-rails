@@ -5,7 +5,7 @@ class App.Views.BaseView extends Backbone.View
     @template = JST[@template] if @template?
 
   render: ->
-    console.p "BaseView -> render", @el, @template, @template_obj
+    console.p "BaseView -> render", @el, @template_obj
     $(@el).html @template(@template_obj) if @el? and @template?
     @
 
