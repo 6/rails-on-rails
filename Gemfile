@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'newrelic_rpm'
 gem 'pg'
 gem 'rails', '3.2.2'
+gem 'sorcery'
 gem 'twitter-bootstrap-rails'
 gem 'unicorn'
 
