@@ -6,7 +6,7 @@ make sure you have new-ish version of [PostgreSQL](http://www.postgresql.org/) i
 
 ### checklist
 
-1. `git clone git://github.com/6/rails-boilerplate.git APPNAME`
+1. `git clone git://github.com/6/rails-on-rails.git APPNAME`
 1. edit `APPNAME/.rvmrc` to change gemset name
 1. `cd APPNAME` and run `bundle install`
 1. edit `.git/config` origin to point to your repo (switch to SSH read/write URL)
