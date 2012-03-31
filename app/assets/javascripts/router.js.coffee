@@ -4,7 +4,7 @@ class App.Routers.AppRouter extends Backbone.Router
 
   index: ->
     console.p "Router -> index"
-    @_set_view new App.Views.Example(title: "Hello from hamlc").render()
+    @_set_view new App.Views.Example(title: "Hello from eco").render()
 
   _set_view: (view) =>
     console.p "Destroy", @view, "_set_view", view
