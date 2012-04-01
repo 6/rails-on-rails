@@ -12,12 +12,26 @@
     = csrf_meta_tags
     = yield :extra_head
   %body
-    - if current_user
-      ="Logged in as #{current_user.email}."
-      =link_to "Log out", logout_path
-    - else
-      ="#{link_to "Sign up", signup_path} or #{link_to "Log in", login_path}.".html_safe
-      = link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook)
-    - flash.each do |name, msg|
-      = content_tag :div, msg, :id => "flash_#{name}"
-    #main= yield
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{:data => {:toggle => "collapse", :target => ".nav-collapse"}}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to "Rails on Rails", root_url, :class => "brand"
+          .nav-collapse
+            %ul.nav
+              %li{:class => current_page?(root_url) ? "active" : ""}= link_to "Home", root_url
+              - if current_user
+                %li
+                  %a= "Logged in as #{current_user.email}"
+                %li= link_to "Logout", logout_path
+              - else
+                %li{:class => current_page?(signup_path) ? "active" : ""}= link_to "Sign up", signup_path
+                %li{:class => current_page?(login_path) ? "active" : ""}= link_to "Login", login_path
+                %li= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook)
+    .container
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+      = yield
