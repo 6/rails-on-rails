@@ -3,6 +3,7 @@ source :rubygems
 gem 'eco'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'pg'
 gem 'rails', '3.2.3'
