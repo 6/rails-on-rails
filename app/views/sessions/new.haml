@@ -1,4 +1,4 @@
-%h1>Log in
+%h1>Login
 = form_tag sessions_path do
   .field
     = label_tag :email
@@ -10,4 +10,4 @@
     %label.checkbox
       = check_box_tag :remember_me, 1, params[:remember_me]
       Remember me
-  = submit_tag "Log in", :class => 'btn btn-large'
+  = submit_tag "Login", :class => 'btn btn-large'
