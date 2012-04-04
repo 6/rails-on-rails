@@ -6,10 +6,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to root_url, :notice => "Signed up!"
-    else
-      flash.now.alert = @user.errors.full_messages.to_sentence if @user.errors.any?
-      render :new
+      user = login(params[:user][:email], params[:user][:password], nil)
+      return redirect_to root_url if user
     end
+    flash.now.alert = @user.errors.full_messages.to_sentence if @user.errors.any?
+    render :new
   end
 end
