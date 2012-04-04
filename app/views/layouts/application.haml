@@ -33,5 +33,5 @@
                 %li= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook)
     .container
       - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
+        = content_tag :div, msg, :class => "alert flash_#{name}"
       = yield
