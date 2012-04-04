@@ -19,10 +19,10 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to "Rails on Rails", root_url, :class => "brand"
+          = link_to "Rails on Rails", root_path, :class => "brand"
           .nav-collapse
             %ul.nav
-              %li{:class => current_page?(root_url) ? "active" : ""}= link_to "Home", root_url
+              %li{:class => current_page?(root_path) ? "active" : ""}= link_to "Home", root_path
               - if current_user
                 %li
                   %a= "Logged in as #{current_user.email}"
