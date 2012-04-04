@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_url, :notice => "Signed up!"
     else
+      flash.now.alert = @user.errors.full_messages.to_sentence if @user.errors.any?
       render :new
     end
   end
