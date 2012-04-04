@@ -7,6 +7,7 @@
     = label_tag :password
     = password_field_tag :password
   .field
-    = check_box_tag :remember_me, 1, params[:remember_me]
-    = label_tag :remember_me
+    %label.checkbox
+      = check_box_tag :remember_me, 1, params[:remember_me]
+      Remember me
   = submit_tag "Log in", :class => 'btn btn-large'
