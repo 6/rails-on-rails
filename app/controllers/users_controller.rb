@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       user = login(params[:user][:email], params[:user][:password], nil)
       return redirect_to root_url if user
     end
-    flash.now.alert = @user.errors.full_messages.to_sentence if @user.errors.any?
-    render :new
+    flash.alert = @user.errors.full_messages.to_sentence if @user.errors.any?
+    redirect_to signup_path
   end
 end
