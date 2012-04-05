@@ -1,12 +1,6 @@
 = link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook), :class => 'btn btn-large'
 = form_for @user do |f|
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :password
-    = f.password_field :password
-  .field
-    = f.label :password_confirmation
-    = f.password_field :password_confirmation
+  .field= f.text_field :email, :placeholder => "Email"
+  .field= f.password_field :password, :placeholder => "Password"
+  .field= f.password_field :password_confirmation, :placeholder => "Password confirmation"
   = f.submit 'Sign Up', :class => 'btn btn-large'

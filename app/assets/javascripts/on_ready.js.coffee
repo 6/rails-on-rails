@@ -1,6 +1,7 @@
 $ ->
   clean_up_fb()
   init_bootstrap()
+  $('input, textarea').placeholder()
   App.init()
 
 clean_up_fb = ->

@@ -1,11 +1,7 @@
 = link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook), :class => 'btn btn-large'
 = form_tag sessions_path do
-  .field
-    = label_tag :email
-    = text_field_tag :email, params[:email]
-  .field
-    = label_tag :password
-    = password_field_tag :password
+  .field= text_field_tag :email, params[:email], :placeholder => "Email"
+  .field= password_field_tag :password, nil, :placeholder => "Password"
   .field
     %label.checkbox
       = check_box_tag :remember_me, 1, params[:remember_me]
