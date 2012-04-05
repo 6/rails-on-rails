@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_back_or_to root_url
     else
       flash.alert = "Email or password was invalid."
-      redirect_to login_path
+      redirect_to login_path(:email => params[:email])
     end
   end
   
