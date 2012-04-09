@@ -15,6 +15,7 @@ make sure you have new-ish version of [PostgreSQL](http://www.postgresql.org/) i
 1. create `config/heroku_env.rb` and insert any secret ENV variables (e.g. API keys). Add `ENV['BASE_URL'] = 'http://localhost:5000'`
 1. edit `config/locales/en.yml` to insert your app info
 1. edit `config/initializers/typus.rb` and change the admin panel username/password
+1. `rake db:create` and then `rake db:migrate`
 1. create a heroku app on cedar: `heroku create APPNAME -s cedar`
 1. add newrelic: `heroku addons:add newrelic:standard`
 
