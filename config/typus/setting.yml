@@ -1,0 +1,7 @@
+# Use the README file as a reference to customize settings.
+
+Setting:
+  fields:
+    default: var, value, thing_id, thing_type
+    form: var, value, thing_id, thing_type
+  application: Application
