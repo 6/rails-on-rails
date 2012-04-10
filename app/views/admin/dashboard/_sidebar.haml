@@ -1,0 +1,2 @@
+%h1 Settings
+%p= link_to "Turn #{Setting.maintenance_mode ? 'off' : 'on'} maintenance mode", admin_settings_path(:action => :toggle_maintenance_mode)

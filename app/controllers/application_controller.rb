@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :set_debug, :set_locale
+  before_filter :set_debug, :set_locale, :disable_if_maintenance
 
   private
   
@@ -15,5 +15,9 @@ class ApplicationController < ActionController::Base
   
   def not_authenticated
     redirect_to login_url, :alert => "First log in to view this page."
+  end
+  
+  def disable_if_maintenance
+    render :text => "We're currently under maintenance. Please try again in a few minutes." if Setting.maintenance_mode
   end
 end

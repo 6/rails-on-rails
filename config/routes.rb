@@ -10,5 +10,8 @@ RailsBoilerplate::Application.routes.draw do
   match "oauth/callback" => "oauths#callback"
   match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
 
+  namespace :admin do
+    get 'settings/:action' => 'settings#:action', :as => :settings
+  end
   root :to => 'home#index'
 end
