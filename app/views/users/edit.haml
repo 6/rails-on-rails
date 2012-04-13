@@ -1,5 +1,6 @@
 = form_for @user do |f|
-  .field
-    = f.label :email, "Email"
-    = f.text_field :email, :value => @user.email, :placeholder => "Email"
-  = f.submit 'Save', :class => 'btn'
+  %fieldset
+    %legend Change email
+    .fields= f.text_field :email, :value => @user.email, :placeholder => "Email"
+    = f.submit 'Save email', :class => 'btn'
+
