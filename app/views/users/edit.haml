@@ -4,3 +4,11 @@
     .fields= f.text_field :email, :value => @user.email, :placeholder => "Email"
     = f.submit 'Save email', :class => 'btn'
 
+- if @user.authentications.empty?
+  = form_for @user do |f|
+    %fieldset
+      %legend Change password
+      .fields= f.password_field :password, :placeholder => "New password"
+      = f.submit 'Save password', :class => 'btn'
+- else
+  / TODO manage authentications
