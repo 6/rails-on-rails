@@ -1,0 +1,2 @@
+admin:
+  Role: create, read, update, delete
