@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'cancan'
 gem 'eco'
 gem 'haml-rails'
 gem 'jquery-rails'
@@ -8,6 +9,7 @@ gem 'newrelic_rpm'
 gem 'pg'
 gem 'rails', '3.2.3'
 gem 'rails-settings-cached'
+gem 'rolify'
 gem 'sorcery'
 gem 'twitter-bootstrap-rails'
 gem 'typus'

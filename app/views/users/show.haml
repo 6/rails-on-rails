@@ -1,0 +1,7 @@
+%h1= "Email: #{@user.email}"
+%p
+  Can you edit?
+  - if can? :update, @user
+    = link_to "Edit", edit_user_path(@user)
+  - else
+    %b No
