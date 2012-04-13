@@ -2,3 +2,9 @@
   %meta{:name => "keywords", :content => "cool"}
 %b= link_to "Secret URL (must login)", secret_path
 #bb-test Loading backbone...
+%br
+%br
+%b List of users:
+%ul
+- @users.each do |u|
+  %li= link_to "#{u.id}: #{u.email}", user_path(u)
