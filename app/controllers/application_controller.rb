@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
   
   def not_authenticated
-    redirect_to login_url, :alert => "First log in to view this page."
+    redirect_to login_url, :alert => "You have to login to view this page."
   end
   
   def disable_if_maintenance
