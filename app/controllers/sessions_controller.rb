@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     else
       u = User.find_by_email(params[:email])
       if u.andand.lock_expires_at and Time.now < u.lock_expires_at
-        flash.alert = "Too many failed login attempts. Try again in #{((u.lock_expires_at - Time.now) / 60).round} minute(s)."
+        flash.alert = "Too many failed login attempts. Try again in #{((u.lock_expires_at - Time.now) / 60).ceil} minute(s)."
       else
         flash.alert = "Email or password was invalid."
       end
