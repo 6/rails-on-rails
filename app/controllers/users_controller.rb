@@ -18,7 +18,8 @@ class UsersController < ResourceController
     if @user.update_attributes(params[:user]) #TODO
       redirect_to @user, :notice => "Saved new profile information."
     else
-      render :edit, :notice => "Error updating your profile."
+      flash.now[:notice] = "Error updating your profile."
+      render :edit
     end
   end
 end
