@@ -5,6 +5,6 @@
     .field= password_field_tag :password, nil, :placeholder => "Password"
     .field
       %label.checkbox
-        = check_box_tag :remember_me, 1, params[:remember_me]
+        = check_box_tag :remember_me, 1, params[:remember_me], :checked => "checked"
         Remember me
     = submit_tag "Login", :class => 'btn btn-large'
