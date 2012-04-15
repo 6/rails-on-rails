@@ -22,13 +22,13 @@
           = link_to "Rails on Rails", root_path, :class => "brand"
           .nav-collapse
             %ul.nav
-              %li{:class => current_page?(root_path) ? "active" : ""}= link_to "Home", root_path
+              %li= link_to_active "Home", root_path
               - if current_user
-                %li{:class => current_page?(user_path(current_user)) ? "active" : ""}= link_to "Profile", user_path(current_user)
+                %li= link_to_active "Profile", user_path(current_user)
                 %li= link_to "Logout", logout_path
               - else
-                %li{:class => current_page?(signup_path) ? "active" : ""}= link_to "Sign up", signup_path
-                %li{:class => current_page?(login_path) ? "active" : ""}= link_to "Login", login_path
+                %li= link_to_active "Sign up", signup_path
+                %li= link_to_active "Login", login_path
     .container
       - flash.each do |name, msg|
         = content_tag :div, msg, :class => "alert flash_#{name}"
