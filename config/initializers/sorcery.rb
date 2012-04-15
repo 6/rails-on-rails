@@ -91,7 +91,7 @@ Rails.application.config.sorcery.configure do |config|
   config.facebook.key = ENV['FACEBOOK_APP_ID']
   config.facebook.secret = ENV['FACEBOOK_SECRET']
   config.facebook.callback_url = "#{ENV['BASE_URL']}/oauth/callback?provider=facebook"
-  config.facebook.user_info_mapping = {:email => "email"}
+  config.facebook.user_info_mapping = {:email => "email", :full_name => "name"}
   config.facebook.scope = "email"
   #
   # config.github.key = ""

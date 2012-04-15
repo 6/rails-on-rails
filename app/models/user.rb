@@ -10,6 +10,7 @@
 #  updated_at                   :datetime        not null
 #  remember_me_token            :string(255)
 #  remember_me_token_expires_at :datetime
+#  full_name                    :string(255)
 #
 
 class User < ActiveRecord::Base
@@ -18,7 +19,7 @@ class User < ActiveRecord::Base
     config.authentications_class = Authentication
   end
   
-  attr_accessible :email, :password, :password_confirmation, :authentications_attributes
+  attr_accessible :full_name, :email, :password, :password_confirmation, :authentications_attributes
   
   has_many :authentications, :dependent => :destroy
   accepts_nested_attributes_for :authentications
@@ -27,4 +28,5 @@ class User < ActiveRecord::Base
   validates_presence_of :password, :on => :create
   validates_presence_of :email
   validates_uniqueness_of :email
+  validates_presence_of :full_name
 end

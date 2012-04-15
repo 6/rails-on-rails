@@ -1,7 +1,9 @@
 = form_for @user do |f|
   %fieldset
-    %legend Change email
-    .fields= f.text_field :email, :value => @user.email, :placeholder => "Email"
+    %legend Edit account
+    .fields
+      .field= f.text_field :full_name, :value => @user.full_name, :placeholder => "Full name"
+      .field= f.text_field :email, :value => @user.email, :placeholder => "Email"
     = f.submit 'Save email', :class => 'btn'
 
 - if @user.authentications.empty?

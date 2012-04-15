@@ -1,4 +1,4 @@
-%h1= "Email: #{@user.email}"
+%h1= @user.full_name
 %p
   Can you edit?
   - if can? :update, @user

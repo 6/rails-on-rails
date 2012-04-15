@@ -2,7 +2,7 @@
 
 User:
   fields:
-    default: email, crypted_password, salt, remember_me_token, remember_me_token_expires_at
-    form: email, crypted_password, salt, remember_me_token, remember_me_token_expires_at
+    default: full_name, email, crypted_password, salt, remember_me_token, remember_me_token_expires_at
+    form: full_name, email, crypted_password, salt, remember_me_token, remember_me_token_expires_at
   relationships: authentications
   application: Application
