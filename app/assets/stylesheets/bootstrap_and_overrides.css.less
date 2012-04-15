@@ -4,7 +4,7 @@ body {
   padding-top: 40px; // make room for the navbar
 }
 */
-@import "twitter/bootstrap/responsive";
+//@import "twitter/bootstrap/responsive";
 //@gridColumns: 16;
 //@gridColumnWidth: 50px;
 //@gridGutterWidth: 0px;
@@ -15,19 +15,15 @@ body {
 
 @linkColor: #27d;
 
-body {
-  padding:0;
-}
-.container {
-  padding:0 20px;
-}
-
 .navbar {
   margin-bottom: 0;
 }
 
 .navbar-inner {
   .border-radius(0);
+  .container-fluid {
+    padding:0;
+  }
 }
 
 .navbar .nav a.active, .navbar .nav a.active:hover {

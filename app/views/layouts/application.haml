@@ -14,7 +14,7 @@
   %body
     .navbar
       .navbar-inner
-        .container
+        .container-fluid
           %a.btn.btn-navbar{:data => {:toggle => "collapse", :target => ".nav-collapse"}}
             %span.icon-bar
             %span.icon-bar
@@ -29,7 +29,7 @@
               - else
                 %li= link_to_active "Sign up", signup_path
                 %li= link_to_active "Login", login_path
-    .container
+    .container-fluid
       - flash.each do |name, msg|
         = content_tag :div, msg, :class => "alert flash_#{name}"
       = yield
