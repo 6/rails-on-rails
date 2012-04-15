@@ -36,3 +36,12 @@ body {
   text-decoration: none;
   background-color: rgba(0,0,0,0.25);
 }
+
+@facebookColor: saturate(#3b5998, 5%);
+.btn-facebook {
+  .buttonBackground(lighten(@facebookColor, 15%), darken(@facebookColor, 0%));
+}
+.btn-facebook, .btn-facebook:hover {
+  color: @white;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+}

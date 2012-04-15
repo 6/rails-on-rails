@@ -1,5 +1,5 @@
 #login-signup
-  #social-login= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook), :class => 'btn btn-large'
+  #social-login= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook), :class => 'btn btn-large btn-facebook'
   = form_tag sessions_path do
     .field= text_field_tag :email, params[:email], :placeholder => "Email"
     .field= password_field_tag :password, nil, :placeholder => "Password"
