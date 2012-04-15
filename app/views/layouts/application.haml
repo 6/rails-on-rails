@@ -29,7 +29,7 @@
               - else
                 %li= link_to_active "Sign up", signup_path
                 %li= link_to_active "Login", login_path
-    #main.container-fluid
+    #main{:class => "container-fluid rails-#{controller_name}-#{action_name}"}
       - flash.each do |name, msg|
         = content_tag :div, msg, :class => "alert flash-#{name}"
       = yield
