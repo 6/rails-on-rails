@@ -15,6 +15,11 @@ body {
 
 @linkColor: #27d;
 
+@navbarBackgroundHighlight: #1f5fdf;
+@navbarBackground: darken(@navbarBackgroundHighlight, 15%);
+@navbarLinkColor: desaturate(lighten(@navbarBackgroundHighlight, 35%), 5%);
+@navbarText: desaturate(lighten(@navbarLinkColor, 10%), 100%);
+
 .navbar {
   margin-bottom: 0;
 }
@@ -29,5 +34,5 @@ body {
 .navbar .nav a.active, .navbar .nav a.active:hover {
   color: white;
   text-decoration: none;
-  background-color: #222;
+  background-color: rgba(0,0,0,0.25);
 }
