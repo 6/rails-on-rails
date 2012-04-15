@@ -6,7 +6,7 @@ class UsersController < ResourceController
   def create
     @user = User.new(params[:user])
     if @user.save
-      user = login(params[:user][:email], params[:user][:password], nil)
+      user = login(params[:user][:email], params[:user][:password], "1")
       return redirect_to root_url if user
     end
     flash.alert = @user.errors.full_messages.to_sentence if @user.errors.any?
