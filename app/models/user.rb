@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :authentications
 
   validates_confirmation_of :password
-  validates_presence_of :password, :on => :create
+  validates_presence_of :password
   validates_presence_of :email
   validates_uniqueness_of :email
   validates_presence_of :full_name
