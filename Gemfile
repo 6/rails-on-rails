@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'andand'
 gem 'cancan'
 gem 'eco'
 gem 'haml-rails'
