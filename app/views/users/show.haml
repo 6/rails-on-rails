@@ -1,7 +1,5 @@
 %h1= @user.full_name
 %p
-  Can you edit?
   - if can? :update, @user
-    = link_to "Edit", edit_user_path(@user)
-  - else
-    %b No
+    = link_to "Edit your settings &rarr;".html_safe, edit_user_path(@user)
+%hr.full-width
