@@ -2,7 +2,7 @@
 # The default is nothing which will include only core features (password encryption, login/logout).
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
-Rails.application.config.sorcery.submodules = [:core, :remember_me, :external]
+Rails.application.config.sorcery.submodules = [:core, :remember_me, :external, :brute_force_protection]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -322,13 +322,13 @@ Rails.application.config.sorcery.configure do |config|
     # How many failed logins allowed.
     # Default: `50`
     #
-    # user.consecutive_login_retries_amount_limit =
+    user.consecutive_login_retries_amount_limit = 30
 
 
     # How long the user should be banned. in seconds. 0 for permanent.
     # Default: `60 * 60`
     #
-    # user.login_lock_time_period =
+    user.login_lock_time_period = 120
 
 
     # -- activity logging --

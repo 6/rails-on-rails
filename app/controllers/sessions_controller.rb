@@ -7,7 +7,12 @@ class SessionsController < ApplicationController
     if user
       redirect_back_or_to root_url
     else
-      flash.alert = "Email or password was invalid."
+      u = User.find_by_email(params[:email])
+      if u.andand.lock_expires_at and Time.now < u.lock_expires_at
+        flash.alert = "Too many failed login attempts. Try again in #{((u.lock_expires_at - Time.now) / 60).round} minute(s)."
+      else
+        flash.alert = "Email or password was invalid."
+      end
       redirect_to login_path(:email => params[:email])
     end
   end

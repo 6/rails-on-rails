@@ -11,6 +11,8 @@
 #  remember_me_token            :string(255)
 #  remember_me_token_expires_at :datetime
 #  full_name                    :string(255)
+#  failed_logins_count          :integer         default(0)
+#  lock_expires_at              :datetime
 #
 
 require 'test_helper'
