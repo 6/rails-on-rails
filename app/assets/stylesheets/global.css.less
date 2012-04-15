@@ -4,15 +4,16 @@
   padding-top: 8px;
 }
 
+.full-width {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.no-top {
+  margin-top: -15px;
+}
+
 #main {
   padding-top: 15px;
-  .full-width {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  .no-top {
-    margin-top: -15px
-  }
 }
 
 #login-signup {
@@ -23,10 +24,20 @@
     text-align:left;
     margin:0 auto;
   }
-  #social-login {
-    padding:10px;
-    background: #f5f5f5;
-    border-bottom: 1px solid #dadada;
-    margin-bottom: 15px;
+}
+
+#main-header {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #dadada;
+  margin-bottom:15px;
+  .no-top;
+  .full-width;
+}
+
+#user-links-wrap {
+  text-align:right;
+  a {
+    line-height: 36px;
   }
 }

@@ -1,5 +1,6 @@
-%h1= @user.full_name
-%p
-  - if can? :update, @user
-    = link_to "Edit your settings &rarr;".html_safe, edit_user_path(@user)
-%hr.full-width
+#main-header
+  .row-fluid
+    %h1.span8= @user.full_name
+    #user-links-wrap.span4
+      - if can? :update, @user
+        = link_to "Edit your settings &rarr;".html_safe, edit_user_path(@user)
