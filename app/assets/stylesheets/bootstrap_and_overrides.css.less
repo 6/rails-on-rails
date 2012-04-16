@@ -15,6 +15,9 @@ body {
 
 @linkColor: #27d;
 
+@warningText: darken(#c09853, 3%);
+@warningBorder: desaturate(darken(spin(@warningBackground, -10), 20%), 20%);
+
 @navbarBackgroundHighlight: #1f5fdf;
 @navbarBackground: darken(@navbarBackgroundHighlight, 15%);
 @navbarLinkColor: lighten(saturate(@navbarBackgroundHighlight, 30%), 45%);
