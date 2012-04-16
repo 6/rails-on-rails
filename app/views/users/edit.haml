@@ -6,7 +6,7 @@
       .field= f.text_field :email, :value => @user.email, :placeholder => "Email"
     = f.submit 'Save settings', :class => 'btn'
 
-- if @user.authentications.empty?
+- if @user.has_password?
   = form_for @user do |f|
     %fieldset
       %legend Change password
