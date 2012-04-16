@@ -17,11 +17,14 @@ body {
 
 @navbarBackgroundHighlight: #1f5fdf;
 @navbarBackground: darken(@navbarBackgroundHighlight, 15%);
-@navbarLinkColor: desaturate(lighten(@navbarBackgroundHighlight, 35%), 5%);
-@navbarText: desaturate(lighten(@navbarLinkColor, 10%), 100%);
+@navbarLinkColor: lighten(saturate(@navbarBackgroundHighlight, 30%), 45%);
+@navbarText: desaturate(darken(@navbarLinkColor, 15%), 50%);
 
 .navbar {
   margin-bottom: 0;
+  a {
+    font-weight: bold;
+  }
 }
 
 .navbar-inner {
