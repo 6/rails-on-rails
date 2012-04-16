@@ -19,6 +19,13 @@ make sure you have new-ish version of [PostgreSQL](http://www.postgresql.org/) i
 1. create a heroku app on cedar: `heroku create APPNAME -s cedar`
 1. add newrelic: `heroku addons:add newrelic:standard`
 
+Once you sign up, you can make yourself (or other users) and admin:
+
+    rails c
+    User.find_by_email("your@email.com").add_role :admin
+
+Then, navigate to http://localhost:5000/admin to administer data.
+
 ### start
 
 run `foreman start`
