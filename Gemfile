@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'pg'
+gem 'rabl'
 gem 'rails', '3.2.3'
 gem 'rails-settings-cached'
 gem 'rolify'
@@ -15,6 +16,7 @@ gem 'sorcery'
 gem 'twitter-bootstrap-rails'
 gem 'typus'
 gem 'unicorn'
+gem 'yajl-ruby'
 
 # Gems used for assets (not required in production environments by default)
 group :assets do

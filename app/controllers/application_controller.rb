@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :set_debug, :set_locale, :disable_if_maintenance
+  respond_to :html, :json
 
   private
   

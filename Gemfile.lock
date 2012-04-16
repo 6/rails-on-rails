@@ -103,6 +103,9 @@ GEM
       multi_json (~> 1.0)
     pg (0.13.2)
     polyglot (0.3.3)
+    rabl (0.6.9)
+      activesupport (>= 2.3.14)
+      multi_json (~> 1.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -173,6 +176,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -190,6 +194,7 @@ DEPENDENCIES
   kaminari
   newrelic_rpm
   pg
+  rabl
   rails (= 3.2.3)
   rails-settings-cached
   rolify
@@ -199,3 +204,4 @@ DEPENDENCIES
   typus
   uglifier (>= 1.0.3)
   unicorn
+  yajl-ruby
