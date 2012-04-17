@@ -1,6 +1,7 @@
 # Use the README file as a reference to customize settings.
 
 User:
+  order_by: -created_at
   fields:
     default: full_name, email, crypted_password, created_at, updated_at
   relationships: authentications

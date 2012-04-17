@@ -1,6 +1,7 @@
 # Use the README file as a reference to customize settings.
 
 Authentication:
+  order_by: -created_at
   fields:
     default: user_id, provider, uid, created_at
   application: Application
