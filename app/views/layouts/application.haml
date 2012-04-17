@@ -23,8 +23,6 @@
           .nav-collapse
             %ul.nav
               %li= link_to_active "Home", root_path
-              - if current_user
-                %li= link_to_active "Profile", user_path(current_user)
               %li= link_to_active "Secret", secret_path
             %ul.nav.pull-right
               - if current_user
