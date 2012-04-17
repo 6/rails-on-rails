@@ -2,5 +2,5 @@
 
 Authentication:
   fields:
-    default: user_id, provider, uid
+    default: user_id, provider, uid, created_at
   application: Application
