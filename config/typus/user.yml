@@ -2,6 +2,8 @@
 
 User:
   order_by: -created_at
+  search: full_name, email
+  filters: created_at
   fields:
     default: full_name, email, crypted_password, created_at, updated_at
   relationships: authentications

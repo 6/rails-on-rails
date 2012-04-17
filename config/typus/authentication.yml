@@ -2,6 +2,8 @@
 
 Authentication:
   order_by: -created_at
+  filters: created_at
+  search: uid
   fields:
     default: user_id, provider, uid, created_at
   application: Application
