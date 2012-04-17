@@ -3,6 +3,4 @@
 Authentication:
   fields:
     default: user_id, provider, uid
-    form: user_id, provider, uid
-  relationships: 
   application: Application

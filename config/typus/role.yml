@@ -1,6 +1,4 @@
 Role:
   fields:
     default: name, resource_id, resource_type
-    form: name, resource_id, resource_type
-  relationships: 
   application: Application
