@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_filter :require_not_login, :only => [:new]
+  
   def new
   end
 

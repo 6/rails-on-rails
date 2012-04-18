@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   private
   
+  def require_not_login
+    redirect_to root_url if current_user.present?
+  end
+  
   def set_debug
     @debug = Rails.env.development? || params[:debug].present? ? 'yes' : 'no'
   end
