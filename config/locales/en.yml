@@ -5,3 +5,9 @@ en:
   app: "Rails Boilerplate"
   description_short: "Quick Rails Apps"
   description_long: "%{app} helps me get started developing Ruby on Rails apps more quickly."
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        # The defaults are "about 1 hour" and "about %{count} hours"
+        one: "1 hour"
+        other: "%{count} hours"
