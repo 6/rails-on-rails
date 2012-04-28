@@ -11,6 +11,7 @@
     %fieldset
       %legend Change password
       .fields= f.password_field :password, :placeholder => "New password"
+      .hide= f.text_field :updating_password, :value => "1"
       = f.submit 'Save password', :class => 'btn'
 - else
   / TODO manage authentications
