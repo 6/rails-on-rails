@@ -8,6 +8,7 @@ class Ability
       can :manage, :all
     elsif user.new_record? # not logged in
       can :read, :all
+      can :create, User
     else
       can :read, :all
       can :manage, User, :id => user.id
