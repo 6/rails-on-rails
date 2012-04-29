@@ -7,10 +7,13 @@ class ResourceController < ApplicationController
   
   private
   
-  def extract_params(key, params_list)
+  def extract_params(key, params_list, unkeyed_params_list = [])
     new_params = {}
     params_list.each do |par|
       new_params[par] = params[key][par]
+    end
+    unkeyed_params_list.each do |par|
+      new_params[par] = params[par]
     end
     new_params
   end
