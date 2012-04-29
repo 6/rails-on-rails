@@ -2,7 +2,8 @@ class ResourceController < ApplicationController
   load_and_authorize_resource
   check_authorization
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, :alert => exception.message
+    url = current_user.present? ? root_url : login_url
+    redirect_to url, :alert => exception.message
   end
   
   private
